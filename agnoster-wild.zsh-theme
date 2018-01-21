@@ -63,7 +63,7 @@ prompt_git() {
     if [[ $SHOW_STASH_SEGMENT -eq 1 ]]; then
         stash_size=$(git stash list | wc -l | tr -d ' ')
         if [[ stash_size -ne 0 ]]; then
-            prompt_segment white black
+            prompt_segment cyan black
             echo -n "+${stash_size}"
         fi
     fi
